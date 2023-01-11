@@ -10,10 +10,38 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("AARON'S AIRLINES")
+                .font(.largeTitle)
+                .foregroundColor(Color.blue)
+                .bold()
+                .padding()
+            ZStack{
+                Image("AeroPlane")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .foregroundColor(.accentColor)
+                    .padding()
+                Text("Come Fly With Us")
+                    .font(.title2)
+                    .foregroundColor(Color.white)
+            }
+            HStack{
+                Button("Book A Flight") {
+                    print("Flight Booked")
+                }.padding().border(Color.white, width: 1)
+                    .bold()
+                
+                Button("Flight Status") {print("Flight is on time")}
+                    .padding(.trailing)
+                    .bold()
+                
+                Button("Check In") {print("Check in complete")}
+                    .padding(.trailing)
+                    .bold()
+                
+                
+            }
+            
         }
         .padding()
     }
